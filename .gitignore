@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+private-build/
+build/
+dist/
+*.tmp
+*.log
