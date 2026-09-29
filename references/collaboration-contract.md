@@ -44,6 +44,8 @@ Typical high-impact questions:
 
 Ask two to five questions at a time. Prefer one combined question when the user can answer naturally in a sentence. Do not turn the intake into a long form.
 
+For a new script or major copy rewrite, inspect the user's supplied narration, slide wording, and corrections as voice evidence. If the user's preferred Korean is still unclear, use the five-sentence batch in [voice-calibration.md](voice-calibration.md). Do not add it on top of five unrelated intake questions; either combine the intake or run the voice calibration after the teaching direction is confirmed. Skip it when sufficient examples already exist, and never ask the user to rewrite the same examples twice.
+
 ## Missing-input branches
 
 ### No lesson plan or content file
@@ -107,7 +109,9 @@ Show:
 - added content and its evidence needs
 - timing or classroom-operation concerns
 
-Run a human-language pass on slide titles, student copy, transition lines, and spoken narration. Preserve technical terms and evidence while removing stiff report language, empty slogans, and repeated AI sentence patterns.
+Run a human-language pass on slide titles, student copy, transition lines, and spoken narration. Apply the confirmed user voice profile before the generic `humanize-text` pass. Preserve technical terms and evidence while removing stiff report language, empty slogans, repeated AI sentence patterns, translated sentence order, and fragments whose subject or premise exists only in the writer's head.
+
+When the voice profile is new or provisional, include two or three paired examples at this gate: proposed student wording and teacher narration alongside the user's confirmed style evidence. Ask about the pattern, not every line. Record later corrections in the profile so the same mistake is not repeated during full production.
 
 Keep the student canvas separate from teacher material. The canvas contains only student-facing titles, questions, evidence labels, and activity instructions. Put teacher narration, timing cues, answer explanations, source notes, and classroom-operation guidance in speaker notes, a teacher master, or an HTML teacher view.
 

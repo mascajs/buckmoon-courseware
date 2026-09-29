@@ -16,6 +16,7 @@ BuckMoon Courseware는 수업계획서, 내용 메모, 디자인 참고자료, �
 
 - 수업계획서의 문장을 그대로 옮기지 않고 학습 목표와 수업 흐름을 해석합니다.
 - 학생용 화면, 교강사용 설명, 제작용 메타데이터를 분리합니다.
+- 사용자가 직접 고친 문장을 바탕으로 프로젝트 말투를 먼저 맞추고, 교강사 스크립트와 학생용 문장을 서로 다른 기준으로 작성합니다.
 - 슬라이드 목차와 상세 수업 스크립트를 서로 연결해 작성합니다.
 - 확정된 수업 흐름을 바탕으로 학생 활동지를 만듭니다.
 - 제공된 글꼴, 색상표, 템플릿, 디자인 참고자료를 프로젝트에 맞게 적용합니다.
@@ -30,6 +31,7 @@ buckmoon-courseware/
 ├── SKILL.md
 └── references/
     ├── collaboration-contract.md
+    ├── voice-calibration.md
     ├── script-outline-workflow.md
     ├── worksheet-workflow.md
     ├── visual-layout-motion-library.md
@@ -78,7 +80,7 @@ BuckMoon은 모든 프로젝트에 같은 시각적 특징을 반복하지 않�
 - 인터랙티브 HTML 제작 시 사용할 수 있는 브라우저 또는 HTML 제작 환경
 - 자연스러운 한국어 학생용 문장과 교강사 스크립트를 위한 `humanize-text` 스킬 권장
 
-외부 글꼴, 이미지, 템플릿, 생성형 미디에는 각 자료의 라이선스와 사용 조건이 별도로 적용됩니다.
+외부 글꼴, 이미지, 템플릿, 생성형 미디어에는 각 자료의 라이선스와 사용 조건이 별도로 적용됩니다.
 
 ---
 
@@ -92,6 +94,7 @@ It is an orchestration skill rather than a fixed slide theme. The same workflow 
 
 - interprets a lesson plan instead of copying it directly onto slides;
 - separates student-facing content, speaker notes, and production metadata;
+- learns a project-specific voice from the user's own rewrites and applies separate conventions to teacher narration and student-facing copy;
 - prepares a detailed teaching script and synchronized deck outline;
 - creates activity worksheets from the confirmed classroom flow;
 - adapts supplied fonts, palettes, templates, and design references;
@@ -106,6 +109,7 @@ buckmoon-courseware/
 ├── SKILL.md
 └── references/
     ├── collaboration-contract.md
+    ├── voice-calibration.md
     ├── script-outline-workflow.md
     ├── worksheet-workflow.md
     ├── visual-layout-motion-library.md

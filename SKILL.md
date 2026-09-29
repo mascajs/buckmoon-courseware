@@ -39,7 +39,9 @@ Write student-facing copy that makes sense when the teacher pauses. Keep necessa
 
 Write teacher narration with enough detail that another instructor can teach the lesson without inventing explanations, transitions, expected responses, or fallbacks. Concise slides do not justify a thin script.
 
-For Korean copy and narration, use the installed `humanize-text` skill after the facts are stable. Diagnose the exact AI-like phrase before rewriting it. Preserve evidence, numbers, quotations, and technical terms. Run the language pass again on the rendered student copy.
+Before drafting substantial Korean copy, look for the user's own narration, slide sentences, and corrections. If these do not provide enough evidence for both teacher narration and student-facing copy, run the short calibration in [references/voice-calibration.md](references/voice-calibration.md). Record a project voice profile and give the user's confirmed rewrites priority over generic writing advice.
+
+Use the installed `humanize-text` skill only after the facts and voice profile are stable. Diagnose the exact AI-like phrase before rewriting it. Preserve evidence, numbers, quotations, and technical terms. Reject a humanizer edit when it conflicts with the confirmed user voice. Run the language pass again on the rendered student copy.
 
 ### 3. Build the production packet
 
@@ -100,4 +102,4 @@ Do not infer a reduced-review mode merely because the user asked to make a deck.
 
 ## Project decision record
 
-Keep a concise record of supplied inputs, confirmed audience and teaching direction, deliverables, permitted research, project-specific visual decisions, approved or waived checkpoints, user edits, and unresolved risks. Separate reusable principles from decisions that belong only to the current project.
+Keep a concise record of supplied inputs, confirmed audience and teaching direction, deliverables, permitted research, the project voice profile, project-specific visual decisions, approved or waived checkpoints, user edits, and unresolved risks. Separate reusable principles from decisions that belong only to the current project.

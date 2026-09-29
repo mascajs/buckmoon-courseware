@@ -149,20 +149,23 @@ If a scene fails, merge it with a neighboring scene, add the missing bridge, or 
 - The two files use the same terms, formulas, data cautions, and closing activity timing.
 - A student-facing sentence appears in one canonical form. Do not maintain slightly different versions across the two files.
 - The total duration stays within the confirmed class time, including any setup, transition, presentation, submission, or reflection time the lesson actually uses.
-
 ## Human-language pass
 
-Use `humanize-text` when it is available. For Korean, load its common and Korean rule packs.
+Before drafting substantial Korean copy, apply the project voice profile from [voice-calibration.md](voice-calibration.md). Use `humanize-text` afterward when it is available. For Korean, load its common and Korean rule packs. The user's confirmed rewrites outrank the rule pack.
 
-1. Draft from the approved lesson facts.
-2. Diagnose exact phrases that sound translated, promotional, overly balanced, or machine-made.
-3. Preserve useful traits from the user's own wording, including directness, ordinary verbs, and concrete classroom examples.
-4. Edit only the diagnosed spans. Keep facts, names, dates, numbers, formulas, technical terms, and direct quotations unchanged.
-5. Read student copy and teacher narration aloud. Break any sentence that a teacher cannot say in one breath.
+1. Draft from the approved lesson facts and the confirmed voice profile.
+2. Check Korean sentence order, visible context, and whether an omitted subject or object is actually recoverable.
+3. Diagnose exact phrases that sound translated, promotional, overly balanced, or machine-made.
+4. Preserve useful traits from the user's own wording, including clause order, directness, ordinary verbs, and concrete classroom examples.
+5. Edit only the diagnosed spans. Keep facts, names, dates, numbers, formulas, technical terms, and direct quotations unchanged.
+6. Read student copy without teacher narration and read teacher narration aloud. Rewrite any standalone slide sentence that lacks its subject, action, or premise, and break any spoken sentence that the instructor cannot say in one breath.
 
 Watch especially for:
 
 - vague titles that announce a journey instead of naming the topic;
+- English-like rhetorical order that delays the actual subject, task, or claim until the end;
+- a standalone phrase whose missing subject, object, or premise is not visible on the slide;
+- report-style noun phrases combined with casual spoken endings;
 - repeated `A에서 B로`, `단순히 A가 아니라 B`, and tidy three-part slogans;
 - abstract nouns such as `가능성`, `효율성`, and `확산성` where a verb would be clearer;
 - perfect paragraph rhythm, repeated formal endings, and report-style transitions;
@@ -178,7 +181,7 @@ Teacher lines should sound like a person talking to students, not like a report 
 - Do not announce a point before making it: cut lines such as `여기서 조심할 점이 있습니다`, `이유가 있습니다`, or `~를 살펴보겠습니다`. Say the point directly.
 - Read unfamiliar symbols and new terms aloud the first time they are spoken, once only. Later mentions refer back instead of repeating the reading.
 - State the lesson's framing in the opening in plain words. For an interdisciplinary lesson, say which fields meet and why the connection matters for today's task.
-- When the user supplies a sample of their own teacher narration, match its register and rhythm over these defaults.
+- Match the user's confirmed narration samples in sentence order, register, and rhythm over these defaults. Do not reduce voice matching to copying preferred sentence endings.
 
 Keep the script synchronized with the deck. When a hint, title, or answer changes on screen, update the spoken line too, so the teacher does not say aloud what the screen deliberately hides.
 
