@@ -15,6 +15,7 @@ BuckMoon Courseware는 수업계획서, 내용 메모, 디자인 참고자료, �
 ### 주요 기능
 
 - 수업계획서의 문장을 그대로 옮기지 않고 학습 목표와 수업 흐름을 해석합니다.
+- 새 작업에서 로컬 경험 기록을 조회하고, 조건이 맞는 보완 방법과 사용자 선호를 반영합니다. 피드백과 검토 결과도 다음 작업에 사용할 수 있게 갱신합니다.
 - 학생용 화면, 교강사용 설명, 제작용 메타데이터를 분리합니다.
 - 사용자가 직접 고친 문장을 바탕으로 프로젝트 말투를 먼저 맞추고, 교강사 스크립트와 학생용 문장을 서로 다른 기준으로 작성합니다.
 - 슬라이드 목차와 상세 수업 스크립트를 서로 연결해 작성합니다.
@@ -29,8 +30,10 @@ BuckMoon Courseware는 수업계획서, 내용 메모, 디자인 참고자료, �
 ```text
 buckmoon-courseware/
 ├── SKILL.md
+├── scripts/experience.mjs
 └── references/
     ├── collaboration-contract.md
+    ├── experience-workflow.md
     ├── voice-calibration.md
     ├── script-outline-workflow.md
     ├── worksheet-workflow.md
@@ -69,6 +72,20 @@ Codex에게 BuckMoon Courseware 스킬을 사용해 달라고 요청하면서 �
 
 기본 작업 방식은 협업형입니다. 먼저 제공된 자료를 확인하고, 결과를 실제로 바꿀 수 있는 질문만 사용자에게 묻습니다. 내용과 디자인 방향을 적절한 시점에 확인한 뒤 제작과 검수를 진행합니다.
 
+### 경험 기록 사용
+
+경험은 스킬 실행 중 파일을 읽고 갱신하는 방식으로 유지됩니다. 별도의 백그라운드 학습 기능은 아닙니다. 입력 자료가 빈약하면 관련 사례에서 부족한 설명·예시·활동을 보완한 판단을 찾고, 이번 수업의 조건에 맞춰 적용합니다. 승인된 제안, 결과물 검토, 실제 수업 검증은 구분해서 기록합니다.
+
+저장소 위치는 현재 사용자가 지정한 경로, 프로젝트의 `.buckmoon/experience.local.json`, 스킬 폴더의 `experience.local.json`, 사용자 홈의 `.buckmoon/experience` 순서로 확인합니다. 설정 예시는 다음과 같습니다.
+
+```json
+{"schema_version": 1, "store_path": "../../experience"}
+```
+
+상대경로는 설정 파일이 있는 폴더를 기준으로 해석합니다. 스킬 폴더에 두는 로컬 설정은 Git에서 제외됩니다. 사용자 경험 저장소는 스킬 폴더 밖에 두고, 다른 강사의 작업에는 해당 강사의 별도 저장소를 사용합니다. 개인 기록은 GitHub에 자동으로 올라가지 않으며 다른 컴퓨터로 옮길 때는 따로 복사하고 경로를 연결해야 합니다.
+
+Node가 있으면 `scripts/experience.mjs`로 저장소 조회와 조건별 검색을 할 수 있습니다. 없으면 스킬이 일반 파일 읽기로 같은 기록을 확인합니다. 자세한 절차는 `references/experience-workflow.md`에 있습니다.
+
 ### 디자인 원칙
 
 BuckMoon은 모든 프로젝트에 같은 시각적 특징을 반복하지 않습니다. 디자인 참고자료를 분위기, 마감 방식, 정보 밀도, 시각 문법, 레이아웃 유형, 모션으로 나누어 살펴보고 수업에 맞는 조합을 선택합니다. 하나의 교안 안에서는 일관성을 유지하되, 다른 프로젝트에는 그 내용과 대상에 어울리는 새로운 구성을 사용합니다.
@@ -93,6 +110,7 @@ It is an orchestration skill rather than a fixed slide theme. The same workflow 
 ### What it helps with
 
 - interprets a lesson plan instead of copying it directly onto slides;
+- retrieves local experience by teaching conditions and content gaps, applies relevant user preferences, and retains evidence-backed corrections for later tasks;
 - separates student-facing content, speaker notes, and production metadata;
 - learns a project-specific voice from the user's own rewrites and applies separate conventions to teacher narration and student-facing copy;
 - prepares a detailed teaching script and synchronized deck outline;
@@ -107,8 +125,10 @@ It is an orchestration skill rather than a fixed slide theme. The same workflow 
 ```text
 buckmoon-courseware/
 ├── SKILL.md
+├── scripts/experience.mjs
 └── references/
     ├── collaboration-contract.md
+    ├── experience-workflow.md
     ├── voice-calibration.md
     ├── script-outline-workflow.md
     ├── worksheet-workflow.md
@@ -146,6 +166,14 @@ Ask Codex to use BuckMoon Courseware and provide any materials already available
 - an existing deck or worksheet that should be revised.
 
 The default workflow is collaborative. It inspects the inputs, asks only questions that would materially change the result, confirms the content and visual direction at an appropriate checkpoint, and then builds and verifies the requested artifacts.
+
+### Local experience
+
+Experience persists as local files read and updated during skill execution; no background learning service is implied. The skill retrieves applicable teaching decisions for thin inputs and distinguishes proposed, user-approved, artifact-reviewed, and classroom-validated outcomes.
+
+Store discovery checks an explicitly supplied path, the project's `.buckmoon/experience.local.json`, the skill's ignored `experience.local.json`, then `<user-home>/.buckmoon/experience`. Configuration is `{"schema_version":1,"store_path":"../../experience"}`; relative paths are resolved from the configuration directory. Keep the store outside the skill package and use separate stores for different instructors. Private experience is not automatically published or synced; migrate it separately and reconnect its path on another machine.
+
+The optional dependency-free Node helper `scripts/experience.mjs` resolves and searches the index. Normal file tools can perform the same lookup without Node. See `references/experience-workflow.md` for the full workflow.
 
 ### Design principle
 

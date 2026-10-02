@@ -8,3 +8,6 @@ build/
 dist/
 *.tmp
 *.log
+experience.local.json
+.buckmoon/
+experience/

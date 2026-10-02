@@ -10,6 +10,8 @@ The user's own rewrites outrank generic natural-language rules. Do not “improv
 
 ## Decide whether calibration is needed
 
+Read relevant confirmed examples from the resolved local user-preferences file before counting available evidence. Follow [experience-workflow.md](experience-workflow.md) for discovery and persistence. Current audience, task, and explicit voice instructions override stored preferences; do not borrow another instructor's profile. Ask only for voices or functions still underrepresented.
+
 Voice evidence is sufficient when the project already contains several examples of the user's own:
 
 - teacher narration or spoken transitions;
@@ -106,6 +108,8 @@ Draft student copy and teacher narration separately. For each voice:
 6. show two or three representative lines at the content checkpoint when the profile is provisional or newly created.
 
 Every later user correction becomes new evidence. Record the rejected wording, the user's replacement, and the reason if stated. Update the profile rather than adding a one-off ban to the global skill.
+
+Persist general user preferences in the local preference file and project-specific corrections in their case record. Mark inferred patterns provisional and supersede obsolete preferences when the user changes direction. Do not treat the five diagnostic prompts as confirmed examples or copy them into memory as the user's voice.
 
 ## Acceptance checks
 

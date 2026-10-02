@@ -6,6 +6,8 @@ Automation should reduce repetitive production work without removing the user's 
 
 ## First response after file inspection
 
+First resolve the experience store and retrieve relevant preferences using [experience-workflow.md](experience-workflow.md). For substantial work, compare missing teaching functions with related cases. In the intake, mention only prior decisions that materially affect this proposal; do not narrate storage mechanics or ask the user to find old work again. Current instructions and confirmed conditions override precedent.
+
 Use a compact intake receipt.
 
 ```text
@@ -67,6 +69,10 @@ Ask whether the user wants to:
 3. use a neutral temporary direction for content testing only.
 
 Do not silently use the design of a previous BuckMoon case.
+
+### Materials exist but are incomplete
+
+Apply the gap-to-action map in [experience-workflow.md](experience-workflow.md). Propose explanations, examples, practice, and understanding checks from condition-matched experience before asking the user for more content. Ask about unresolved goals or teaching tradeoffs with concrete options. Do not treat a previous user's approval as approval of this new lesson.
 
 ### No font
 
@@ -135,6 +141,8 @@ Show the full montage or representative preview and list only decisions or probl
 ### Gate 5: final output
 
 Deliver the requested files with any classroom-use or compatibility limitations. Keep the decision record with the project so revisions do not restart the intake.
+
+Update the local case and index with the actual review milestone and remaining issues. Capture meaningful user corrections when they occur, not only at this final gate. Retain user edits and stated reasons; distinguish user approval from artifact review and from classroom results.
 
 ## Progress communication
 
